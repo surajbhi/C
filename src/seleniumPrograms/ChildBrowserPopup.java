@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class ChildBrowserPopup {
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "D:\\chrome driver 2\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver(); // upcasting
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
@@ -23,8 +23,8 @@ public class ChildBrowserPopup {
 		Set<String> ids=driver.getWindowHandles(); //returns value in the form of string but order of insertion is random
 		ArrayList a=new ArrayList(ids);         //order of ids will be maintained
 		System.out.println(a.get(0));          //parent webpage id
-		String title=driver.getTitle();        //just to know the title
-		System.out.println(title);
+		       //just to know the title
+		System.out.println(driver.getTitle());
 		   Thread.sleep(3000);
 
 		
